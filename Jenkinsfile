@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/bjett81/Week-11-Homework' 
+                git branch: 'main', url: 'https://github.com/bjett81/Week-11-Homework/' 
             }
         }
         stage('Initialize Terraform') {
