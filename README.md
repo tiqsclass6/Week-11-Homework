@@ -8,15 +8,26 @@ This repository contains Terraform code for deploying a simple AWS infrastructur
 
 ## 📦 Project Structure
 
-| File / Directory | Description                                      |
-|------------------|--------------------------------------------------|
-| `main.tf`        | Primary Terraform configuration                  |
-| `variables.tf`   | Input variables                                  |
-| `outputs.tf`     | Output definitions                               |
-| `13-SNS.tf`      | SNS (Simple Notification Service) configuration  |
-| `Jenkinsfile`    | Jenkins pipeline for Terraform automation        |
-| `.gitignore`     | Git ignored files                                |
-| `README.md`      | You're here!                                     |
+| File / Directory     | Description                                              |
+|----------------------|----------------------------------------------------------|
+| `0-Auth.tf`          | AWS provider and authentication configuration            |
+| `1-VPC.tf`           | VPC creation                                             |
+| `2-Subnets.tf`       | Public and private subnets across AZs                    |
+| `3-IGW.tf`           | Internet Gateway for public access                       |
+| `4-NAT.tf`           | NAT Gateway and Elastic IP for private subnet access     |
+| `5-Route.tf`         | Route tables and subnet associations                     |
+| `6-SG-All.tf`        | Security Groups for EC2, ALB, Target Groups              |
+| `7-LoadBalancer.tf`  | Application Load Balancer, listeners, and target groups  |
+| `8-AutoScalingGroup.tf` | Auto Scaling Group definition                         |
+| `9-TargetGroup.tf`   | Target group attachment and health check configuration   |
+| `10.LaunchTemplate.tf` | Launch template for EC2 instances                      |
+| `11.Route53.tf`      | Route53 DNS record for ALB                               |
+| `12.Key.tf`          | SSH Key Pair for EC2 access                              |
+| `13-SNS.tf`          | SNS Topic and subscription                               |
+| `14-WAF.tf`          | Web Application Firewall configuration                   |
+| `Jenkinsfile`        | Jenkins pipeline for Terraform automation                |
+| `.gitignore`         | Git ignored files                                        |
+| `README.md`          | You're here!                                             |
 
 ## 🚀 What It Does
 
