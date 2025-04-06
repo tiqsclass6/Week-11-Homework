@@ -7,7 +7,7 @@ resource "aws_launch_template" "TG01-EC2-Template" {
 
   vpc_security_group_ids = [aws_security_group.ASG01-TG01.id]
 
-  user_data = filebase64("ec2scrpit.sh")
+  user_data = filebase64("brazil-script.sh")
 
   tags = {
     Name = "TG01-EC2-Template"
@@ -27,7 +27,7 @@ resource "aws_launch_template" "MultiApp-443-Template" {
 
   vpc_security_group_ids = [aws_security_group.ASG01_TG02.id]
 
-  user_data = filebase64("japanscrpit.sh")
+  user_data = filebase64("japan-script.sh")
 
   tags = {
     Name = "MultiApp-443-Template"
