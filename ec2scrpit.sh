@@ -24,34 +24,30 @@ echo "
 <!doctype html>
 <html lang="en" class="h-100">
   <head>
-    <title>Details for EC2 instance</title>
-  <body background=https://brazil-2025.s3.us-east-1.amazonaws.com/brazil-bg.jpg>
-    </head>
-    <div>
-      <font color="ffffff">
-        <h1>
-          <center>AWS Instance Details</center>
-        </h1>
-        <h1>
-          <center>Theo's Brazilian Blondes</center>
-        </h1>
-      </font><br>
-      <table width=100%>
-        <tr>
-          <td width="33%" align="center"><img src="https://brazil-2025.s3.us-east-1.amazonaws.com/brazil4.jpg" alt="Theo's Blonde" width="527" height="791"></td>
-          <td width="34%" align="center"><br>
-            <font color="ffffff" size="5">
-              <p><b>Instance Name:</b> $(hostname -f)</p>
-              <p><b>Instance Private Ip Address:</b> ${local_ipv4}</p>
-              <p><b>Availability Zone:</b> ${az}</p>
-              <p><b>Virtual Private Cloud (VPC):</b> ${vpc}</p>
-            </font>
-    </div>
-  </body>
-  </td>
-  <td width="33%" align="center"><img src="https://brazil-2025.s3.us-east-1.amazonaws.com/brazil2.jpg" alt="TIQS Afro-Braziliana" width="577" height="791"></td>
-  </tr>
+    <title>Details for EC2 Instance</title>
+  </head>
+  <font color="ffffff">
+    <body background=https://brazil-2025.s3.us-east-1.amazonaws.com/brazil-bg.jpg>
+      <h1><center>AWS Instance Details</center></h1>
+      <h1><center>Theo's Brazilian Blondes</center></h1>
+  </font>
+  <table width=100%>
+    <tr>
+      <td width=33% align="center">
+        <img src="https://brazil-2025.s3.us-east-1.amazonaws.com/brazil4.jpg" alt="Theo Blonde" width="527" height="791"></td>
+      <td width=34% align="center">
+        <font color="ffffff" size="5">
+          <p><b>Instance Name:</b> $(hostname -f)</p>
+          <p><b>Instance Private IP Address:</b> ${local_ipv4}</p>
+          <p><b>Availability Zone:</b> ${az}</p>
+          <p><b>Virtual Private Cloud (VPC):</b> ${vpc}</p>
+        </font>
+      </td>
+      <td width=33% align="center">
+        <img src="https://brazil-2025.s3.us-east-1.amazonaws.com/brazil2.jpg" alt="TIQS Afro-Braziliana" width="577" height="791"></td>
+    </tr>
   </table>
+  </body>
 </html>
 " > /var/www/html/index.html
 

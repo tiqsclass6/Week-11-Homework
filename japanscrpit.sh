@@ -39,8 +39,8 @@ echo "
       <table width=100%>
         <tr>
           <td width=33% align="center"><img src="https://japan-2025.s3.us-east-1.amazonaws.com/japan1.jpg" alt="Japanese Models" width="500" height="720"></td>
-          <td width=34% align="left"><img src="https://japan-2025.s3.us-east-1.amazonaws.com/japan2.jpg" alt="Japanese Models" width="500" height="720"></td>
-          <td width=33% align="left"><img src="https://japan-2025.s3.us-east-1.amazonaws.com/japan3.jpg" alt="Japanese Models" width="500" height="720"></td>
+          <td width=34% align="center"><img src="https://japan-2025.s3.us-east-1.amazonaws.com/japan2.jpg" alt="Japanese Models" width="500" height="720"></td>
+          <td width=33% align="center"><img src="https://japan-2025.s3.us-east-1.amazonaws.com/japan3.jpg" alt="Japanese Models" width="500" height="720"></td>
         </tr>
         <tr>
           <td width=33% align="center"></td>
