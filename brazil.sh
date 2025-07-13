@@ -23,31 +23,37 @@ vpc=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" -s http://169.254.169.254/lates
 echo "
 <!doctype html>
 <html lang="en" class="h-100">
-  <head>
-    <title>Details for EC2 Instance</title>
-  </head>
-  <font color="ffffff">
-    <body background=https://brazil-2025.s3.us-east-1.amazonaws.com/brazil-bg.jpg>
-      <h1><center>AWS Instance Details</center></h1>
-      <h1><center>Theo's Brazilian Blondes</center></h1>
-  </font>
-  <table width=100%>
-    <tr>
-      <td width=33% align="center">
-        <img src="https://brazil-2025.s3.us-east-1.amazonaws.com/brazil4.jpg" alt="Theo Blonde" width="527" height="791"></td>
-      <td width=34% align="center">
-        <font color="ffffff" size="5">
-          <p><b>Instance Name:</b> $(hostname -f)</p>
-          <p><b>Instance Private IP Address:</b> ${local_ipv4}</p>
-          <p><b>Availability Zone:</b> ${az}</p>
-          <p><b>Virtual Private Cloud (VPC):</b> ${vpc}</p>
-        </font>
-      </td>
-      <td width=33% align="center">
-        <img src="https://brazil-2025.s3.us-east-1.amazonaws.com/brazil2.jpg" alt="TIQS Afro-Braziliana" width="577" height="791"></td>
-    </tr>
-  </table>
-  </body>
+<head>
+<title>Unsecure 80 - Load Balancer</title>
+<body background=https://brazil-2025.s3.us-east-1.amazonaws.com/brazil-bg.jpg>
+</head>
+<div>
+<font color="ffffff">
+<h1>AWS Instance Details</h1>
+<h1>Theo's Brazilian Blondes</h1>
+</font>
+<br>
+<table width=100%>
+<tr>
+<td width=100% align="left">
+<img src="https://brazil-2025.s3.us-east-1.amazonaws.com/brazil4.jpg">
+</td>
+</tr>
+<tr>
+<td width=100% align="left">
+<img src="https://brazil-2025.s3.us-east-1.amazonaws.com/brazil2.jpg" width="40%" height="40%">
+</td>
+</tr>
+</table>
+<br>
+<font color="ffffff" size="5">
+<p><b>Instance Name:</b> $(hostname -f)</p>
+<p><b>Instance Private Ip Address:</b> ${local_ipv4}</p>
+<p><b>Availability Zone:</b> ${az}</p>
+<p><b>Virtual Private Cloud (VPC):</b> ${vpc}</p>
+</font>
+</div>
+</body>
 </html>
 " > /var/www/html/index.html
 
